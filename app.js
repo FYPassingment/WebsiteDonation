@@ -2,24 +2,30 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-// Sample event data (replace with database query results in real implementation)
+// Sample event data
 const sampleEvents = [
   {
+    id: 1,
     name: "Hougang Basketball Tournament",
+    description: "This is a 5v5 Basketball tournament held by Hougang CC and open to all age groups. Registration ends on 24 May.",
     organizer: "Hougang CC",
     location: "Hougang CC",
     date: "25 May 2024",
     time: "12:00 PM - 6:00 PM"
   },
   {
+    id: 2,
     name: "Jurong Spring CCC Football Workshop",
+    description: "A comprehensive football workshop for all levels, organized by Jurong Spring CCC.",
     organizer: "Jurong Spring CCC",
     location: "Jurong Spring CC",
     date: "25 May 2024",
     time: "12:00 PM - 5:00 PM"
   },
   {
+    id: 3,
     name: "Punggol CC Zumba Jam",
+    description: "Join us for a fun and energetic Zumba session at Punggol CC.",
     organizer: "Punggol CC",
     location: "Punggol CC",
     date: "25 May 2024",
@@ -50,13 +56,22 @@ app.get('/events', (req, res) => {
 // Search results route
 app.post('/search', (req, res) => {
   const { eventWhat = '', eventWhere, eventWhen } = req.body;
-  // Ensure 'eventWhat' is a string before calling toLowerCase
   const searchTerm = eventWhat.toLowerCase();
-  // Filter events based on the search term
   const filteredEvents = sampleEvents.filter(event => 
     event.name.toLowerCase().includes(searchTerm)
   );
   res.render('search', { events: filteredEvents });
+});
+
+// Booking route
+app.get('/booking/:id', (req, res) => {
+  const eventId = parseInt(req.params.id);
+  const event = sampleEvents.find(e => e.id === eventId);
+  if (event) {
+    res.render('booking', { event });
+  } else {
+    res.status(404).send('Event not found');
+  }
 });
 
 app.listen(3000, () => {

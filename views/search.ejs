@@ -13,7 +13,9 @@
             <% events.forEach(event => { %>
                 <li class="list-group-item">
                 <span class="badge bg-light text-success shadow fst-italic mb-1">EVENT</span>
-                <h5 class="mb-1"> <%= event.name %></h5>
+                <h5 class="mb-1">
+                    <a href="/booking/<%= event.id %>" class="text-dark text-decoration-none"><%= event.name %></a>
+                </h5>
                 <p class="mb-1">By: <%= event.organizer %></p>
                 <p class="mb-1">Location: <%= event.location %>, Date: <%= event.date %>, Time: <%= event.time %></p>
                 </li>

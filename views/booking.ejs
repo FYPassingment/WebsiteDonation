@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body>
+    <%- include('partials/navbar-withbg') %>
+
+    <!-- Booking Page Content -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title fw-bold"><%= event.name %></h2>
+                        <h4 class="card-title fw-bold">Event Description</h4>
+                        <h4 class="card-text fw-light"><%= event.description %></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title fw-bold">Date and Time</h3>
+                        <p class="mb-0"><%= event.date %></p>
+                        <p><%= event.time %></p>
+                        <h3 class="card-title fw-bold">Venue</h3>
+                        <p><%= event.location %></p>
+                        <a href="#" class="btn btn-danger">Login to view vacancy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
