@@ -5,10 +5,10 @@
     <%- include('partials/navbar-withbg') %>
 
     <!-- Booking Page Content -->
-    <div class="container my-5">
-        <div class="row">
+    <div class="container my-5 border" style="border-width: 2px !important;">
+        <div class="row my-5 me-md-3">
             <div class="col-md-8">
-                <div class="card">
+                <div class="card border-0">
                     <div class="card-body">
                         <h2 class="card-title fw-bold"><%= event.name %></h2>
                         <h4 class="card-title fw-bold">Event Description</h4>
@@ -16,15 +16,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title fw-bold">Date and Time</h3>
+            <div class="col-md-4 mt-md-0 mt-4">
+                <div class="card border-0 rounded shadow">
+                    <div class="card-body p-4 shadow">
+                        <h3 class="card-title">Date and Time</h3>
                         <p class="mb-0"><%= event.date %></p>
                         <p><%= event.time %></p>
-                        <h3 class="card-title fw-bold">Venue</h3>
+                        <h3 class="card-title">Venue</h3>
                         <p><%= event.location %></p>
-                        <a href="#" class="btn btn-danger">Login to view vacancy</a>
+                        <form action="/booking-success" method="POST">
+                            <input type="hidden" name="eventId" value="<%= event.id %>">
+                            <button type="submit" class="btn btn-danger mt-2" style="width: 100%;">Book Now</button>
+                        </form>
                     </div>
                 </div>
             </div>

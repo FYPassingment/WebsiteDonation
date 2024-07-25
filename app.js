@@ -74,6 +74,26 @@ app.get('/booking/:id', (req, res) => {
   }
 });
 
+// Booking success route
+app.post('/booking-success', (req, res) => {
+  // Logic to handle booking (e.g., save to database) would go here.
+  // For now, we simply render the success page.
+  res.render('booking-success');
+});
+
+// Booking failed route
+app.post('/booking-failed', (req, res) => {
+  // Logic to handle booking (e.g., save to database) would go here.
+  // For now, we simply render the success page.
+  res.render('booking-failed');
+});
+
+app.get('/booking-failed', (req, res) => {
+  // Logic to handle booking (e.g., save to database) would go here.
+  // For now, we simply render the success page.
+  res.render('booking-failed');
+});
+
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');
 });
