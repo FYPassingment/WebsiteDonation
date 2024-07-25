@@ -73,6 +73,18 @@ height: auto;
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+
+/* Upcoming Events Section */
+.upcoming-events {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
+.upcoming-events .card {
+  min-width: 200px;
+}
+
 /* Footer */
 .footer {
 background-color: #333;

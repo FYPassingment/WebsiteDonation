@@ -18,6 +18,11 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+// Events route
+app.get('/events', (req, res) => {
+  res.render('events');
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
