@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body>
+    <%- include('partials/navbar') %>
+
+    <!-- Hero Section -->
+    <div class="hero-section" style="background-image: url('/images/bg-rewards.png'); height: 500px;">
+        <div class="overlay"></div>
+        <div class="content text-center text-white">
+            <h1>Rewards</h1>
+            <p>Create an account to earn points and claim exciting rewards!</p>
+            <a href="#" class="btn btn-primary mt-3">Sign Up Now</a>
+        </div>
+    </div>
+
+    <!-- Partners Section -->
+    <div class="container my-5 text-center">
+        <h2>Partnered with</h2>
+        <div class="d-flex justify-content-around align-items-center mt-4">
+            <img src="/images/partner-fairprice.png" alt="FairPrice" class="partner-logo">
+            <img src="/images/partner-mcdonalds.png" alt="McDonald's" class="partner-logo">
+            <img src="/images/partner-singapore-zoo.png" alt="Singapore Zoo" class="partner-logo">
+            <img src="/images/partner-cold-storage.png" alt="Cold Storage" class="partner-logo">
+            <img src="/images/partner-luge.png" alt="Luge" class="partner-logo">
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="how-it-works-section " style="background-image: url('/images/how-it-works-bg.png');">
+        <div class="container text-center py-5">
+            <h1 class="text-white">How it works</h1>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-light text-center p-4">
+                        <h3>1</h3>
+                        <p>Earn points by participating/volunteering at events</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-light text-center p-4">
+                        <h3>2</h3>
+                        <p>Collect sufficient points and redeem rewards of your choice</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-light text-center p-4">
+                        <h3>3</h3>
+                        <p>Use your rewards!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

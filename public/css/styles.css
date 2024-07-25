@@ -90,6 +90,21 @@ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   min-width: 200px;
 }
 
+.partner-logo {
+  max-width: 150px;
+  margin: 0 10px;
+}
+
+.how-it-works-section {
+  background-size: cover;
+  background-position: center;
+}
+
+.card.bg-light {
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
 /* Footer */
 .footer {
 background-color: #333;

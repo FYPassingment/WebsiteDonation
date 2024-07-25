@@ -33,6 +33,15 @@ const sampleEvents = [
   }
 ];
 
+const sampleCourses = [
+  { id: 1, title: "Health & Wellness", shortDescription: "Look good and feel good...", description: "Look good and feel good with our health and wellness tips. Discover how you can spruce up your look with some grooming, make-up and skincare advice, and learn how to take better care of your health and body. With our ‘Health & Wellness’ courses, it is time for you to start feeling and looking your very best.", subcourses: ["Personal Health", "Stress Management", "Dietary Nutrition", "Skincare & Make-up"], image: "/images/health-wellness.png" },
+  { id: 2, title: "Lifestyle & Leisure", shortDescription: "Embrace the Arts...", description: "Embrace the Arts, craft your own leather cardholder, cook up a storm with our celebrity chefs and trainers or unleash your creativity and find the star in you.", subcourses: ["Art & Crafts", "Culinary Skills", "Creative Writing"], image: "/images/lifestyle-leisure.png" },
+  { id: 3, title: "Sports & Fitness", shortDescription: "Conquer air, water, and land...", description: "Conquer air, water, and land while staying up to date with the latest in sports!", subcourses: ["Aerobics", "Swimming", "Yoga"], image: "/images/sports-fitness.png" },
+  { id: 4, title: "Education & Enrichment", shortDescription: "Pique your child's interest...", description: "Pique your child's interest with our range of hands-on science courses or improve pronunciation and reading with our phonics courses.", subcourses: ["Science Experiments", "Phonics", "Reading Clubs"], image: "/images/education-enrichment.png" },
+  { id: 5, title: "Lifelong Learning", shortDescription: "In the age of evolving technology...", description: "In the age of evolving technology, you should evolve as well and learn skills that can keep you up with the times.", subcourses: ["Computer Skills", "Digital Marketing", "Photography"], image: "/images/lifelong-learning.png" },
+  { id: 6, title: "Lifelong", shortDescription: "In the age of evolving technology...", description: "In the age of evolving technology, you should evolve as well and learn skills that can keep you up with the times.", subcourses: ["Computer Skills", "Digital Marketing", "Photography"], image: "/images/lifelong-learning.png" }
+];
+
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -93,6 +102,28 @@ app.get('/booking-failed', (req, res) => {
   // For now, we simply render the success page.
   res.render('booking-failed');
 });
+
+// Courses route
+app.get('/courses', (req, res) => {
+  res.render('courses', { courses: sampleCourses });
+});
+
+// Course details route
+app.get('/courses/:id', (req, res) => {
+  const courseId = parseInt(req.params.id);
+  const course = sampleCourses.find(c => c.id === courseId);
+  if (course) {
+      res.render('course-details', { course });
+  } else {
+      res.status(404).send('Course not found');
+  }
+});
+
+// Rewards route
+app.get('/rewards', (req, res) => {
+  res.render('rewards');
+});
+
 
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body>
+    <%- include('partials/navbar') %>
+
+    <!-- Hero Section -->
+    <div class="hero-section" style="background-image: url('/images/bg-courses.png');">
+        <div class="overlay"></div>
+        <div class="content text-center text-white">
+            <h1>Courses</h1>
+        </div>
+    </div>
+
+    <!-- Courses Section
+    <div class="container my-5">
+        <h2 class="text-center">Courses</h2>
+        <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <img src="/images/health-wellness.png" class="card-img-top" alt="Health & Wellness">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Health & Wellness</h5>
+                        <p class="card-text">With our expert beauty tips, not only will you look good, you will feel good as well!</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <img src="/images/lifestyle-leisure.png" class="card-img-top" alt="Lifestyle & Leisure">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Lifestyle & Leisure</h5>
+                        <p class="card-text">Embrace the Arts, craft your own leather cardholder, cook up a storm with our celebrity chefs and trainers or unleash your creativity and find the star in you.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <img src="/images/sports-fitness.png" class="card-img-top" alt="Sports & Fitness">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sports & Fitness</h5>
+                        <p class="card-text">Conquer air, water, and land while staying up to date with the latest in sports!</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow">
+                            <img src="/images/education-enrichment.png" class="card-img-top" alt="Education & Enrichment">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Education & Enrichment</h5>
+                                <p class="card-text">Pique your child's interest with our range of hands-on science courses or improve pronunciation and reading with our phonics courses.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow">
+                            <img src="/images/lifelong-learning.png" class="card-img-top" alt="Lifelong Learning">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Lifelong Learning</h5>
+                                <p class="card-text">In the age of evolving technology, you should evolve as well and learn skills that can keep you up with the times.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Courses Section -->
+    <div class="container my-5">
+        <h2 class="text-center">Courses</h2>
+        <div class="row mt-4">
+            <% courses.forEach(course => { %>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow">
+                        <img src="<%= course.image %>" class="card-img-top" alt="<%= course.title %>">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><%= course.title %></h5>
+                            <p class="card-text"><%= course.shortDescription %></p>
+                            <a href="/courses/<%= course.id %>" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
