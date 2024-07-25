@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body>
+    <%- include('partials/navbar-withbg') %>
+
+    <!-- FAQ Section -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mt-md-5 pe-5">
+                <h1 style="text-shadow: none; padding-inline: 0px;">Is there something you want to inform us about?</h1>
+                <br>
+                <h2 style="text-shadow: none; padding-inline: 0px;" class="fw-normal">(i.e. incidents, repairs, feedback etc.)</h1>
+                <br>
+                <div class="mt-4">
+                    <form action="/faq" method="GET">
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="location" name="complaintlocation" placeholder="Enter Location" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="urgency" class="form-label">Urgency</label>
+                            <div class="input-group mb-3">
+                                <select class="form-select" aria-label="complainturgency" id="urgency" name="complainturgency">
+                                    <option value="1">None (message, feedback etc.)</option>
+                                    <option value="2">Low (people are not too affected)</option>
+                                    <option value="3">Medium (people are moderately affected)</option>
+                                    <option value="4">High (people are severely affected)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description class="form-label">Description</label>
+                            <input type="text" class="form-control" id="description" name="complaintdescription" placeholder="Enter details...." required>
+                        </div>
+                        <div class="d-grid mt-3">
+                            <button type="submit" class="btn btn-danger ">Submit</button>    
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="/images/qna-bg.png" class="img-fluid rounded " alt="QNA-BG" >
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

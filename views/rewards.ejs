@@ -2,22 +2,25 @@
 <html lang="en">
 <%- include('partials/head') %>
 <body>
-    <%- include('partials/navbar') %>
+    <%- include('partials/navbar-withbg') %>
 
     <!-- Hero Section -->
     <div class="hero-section" style="background-image: url('/images/bg-rewards.png'); height: 500px;">
         <div class="overlay"></div>
         <div class="content text-center text-white">
-            <h1>Rewards</h1>
-            <p>Create an account to earn points and claim exciting rewards!</p>
-            <a href="#" class="btn btn-primary mt-3">Sign Up Now</a>
+            <h1 style="font-size: 64px;">Rewards</h1>
+            <h1>Create an account to earn points and claim exciting rewards!</h1>
+            <a href="#" class="btn bg-white text-dark border-0 btn-primary mt-4">Sign Up Now</a>
         </div>
     </div>
 
     <!-- Partners Section -->
     <div class="container my-5 text-center">
-        <h2>Partnered with</h2>
         <div class="d-flex justify-content-around align-items-center mt-4">
+            <div class="text-start">
+                <h2>Partnered with </h2> 
+                <h5>and more ....</h5> 
+            </div>
             <img src="/images/partner-fairprice.png" alt="FairPrice" class="partner-logo">
             <img src="/images/partner-mcdonalds.png" alt="McDonald's" class="partner-logo">
             <img src="/images/partner-singapore-zoo.png" alt="Singapore Zoo" class="partner-logo">
@@ -30,23 +33,23 @@
     <div class="how-it-works-section " style="background-image: url('/images/how-it-works-bg.png');">
         <div class="container text-center py-5">
             <h1 class="text-white">How it works</h1>
-            <div class="row mt-4">
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-light text-center p-4">
-                        <h3>1</h3>
-                        <p>Earn points by participating/volunteering at events</p>
+            <div class="row mt-4 ">
+                <div class="col-md-4 mb-4 d-flex justify-content-center ">
+                    <div style="height: 100%; width: 60%; border-radius: 50px;" class="card bg-success text-white text-center p-4 ">
+                        <h1 class="fw-bolder">1</h3>
+                        <h4>Earn points by participating / volunteering at events</h4>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-light text-center p-4">
-                        <h3>2</h3>
-                        <p>Collect sufficient points and redeem rewards of your choice</p>
+                <div class="col-md-4 mb-4 d-flex justify-content-center ">
+                    <div style="height: 100%; width: 60%; border-radius: 50px;" class="card bg-success text-white text-center p-4 ">
+                        <h1 class="fw-bolder">2</h3>
+                        <h4>Collect sufficient points and redeem rewards of your choice</h4>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-light text-center p-4">
-                        <h3>3</h3>
-                        <p>Use your rewards!</p>
+                <div class="col-md-4 mb-4 d-flex justify-content-center ">
+                    <div style="height: 100%; width: 60%; border-radius: 50px;" class="card bg-success text-white text-center p-4">
+                        <h1 class="fw-bolder">3</h3>
+                        <h4>Use your rewards!</h4>
                     </div>
                 </div>
             </div>

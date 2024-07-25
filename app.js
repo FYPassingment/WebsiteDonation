@@ -124,6 +124,24 @@ app.get('/rewards', (req, res) => {
   res.render('rewards');
 });
 
+app.get('/faq', (req, res) => {
+  res.render('faq');
+});
+
+app.get('/complain', (req, res) => {
+  res.render('complain');
+});
+
+// Register route
+app.get('/register', (req, res) => {
+  res.render('register');
+});
+
+// Login route
+app.get('/login', (req, res) => {
+  res.render('login');
+});
+
 
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');
