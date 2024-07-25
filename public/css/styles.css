@@ -20,6 +20,11 @@ h1 {
     padding-inline: 25px;
 }
 
+.nav-link {
+  font-weight: 500 !important;
+  color: #000000;
+}
+
 .hero-section {
 position: relative;
 background-image: url('/images/bg.jpg'); /* Update with your image path */

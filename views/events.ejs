@@ -9,21 +9,21 @@
     <div class="overlay"></div>
     <div class="content text-white">
         <div class="p-4">
-            <form>
-                <div class="card bg-white border-0 text-start" style="height: 100%; width: 450px; ">
+            <form action="/search" method="POST">
+                <div class="card bg-white border-0 p-3 text-start" style="height: 100%; width: 450px; ">
                     <div class="card-body">
                             <h2 class="text-center">Explore Events</h2>
                             <div class="mb-3">
                                 <label for="event-what" class="form-label">What*</label>
-                                <input type="text" class="form-control" id="event-what" placeholder="Event type">
+                                <input type="text" class="form-control" id="event-what" name="eventWhat" placeholder="Event type" required>
                             </div>
                             <div class="mb-3">
                                 <label for="event-where" class="form-label">Where</label>
-                                <input type="text" class="form-control" id="event-where" placeholder="Location">
+                                <input type="text" class="form-control" id="event-where" name="eventWhere" placeholder="Location">
                             </div>
                             <div class="mb-3">
                                 <label for="event-when" class="form-label">When</label>
-                                <input type="date" class="form-control" id="event-when">
+                                <input type="date" class="form-control" id="event-when" name="eventWhen">
                             </div>
                             <div class="text-end ">
                                 <button type="submit" class="btn btn-danger ">Search</button>    
@@ -40,50 +40,50 @@
     <h2 class="text-center">Explore <span class="text-success">Events</span></h2>
     <div class="row mt-4">
       <div class="col-md-4">
-        <div class="card shadow">
-          <img src="/images/celebrations.jpg" class="card-img-top" alt="Celebrations and Festivities">
+        <div class="card shadow mb-5">
+          <img src="/images/celebrations.png" class="card-img-top" alt="Celebrations and Festivities">
           <div class="card-body text-center">
-            <h5 class="card-title">Celebrations and Festivities</h5>
+            <h4 class="card-title">Celebrations and Festivities</h4>
           </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card shadow">
-          <img src="/images/arts-culture.jpg" class="card-img-top" alt="Arts and Culture">
+        <div class="card shadow mb-5">
+          <img src="/images/arts-culture.png" class="card-img-top" alt="Arts and Culture">
           <div class="card-body text-center">
-            <h5 class="card-title">Arts and Culture</h5>
+            <h4 class="card-title">Arts and Culture</h4>
           </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card shadow">
-          <img src="/images/exhibition-fair.jpg" class="card-img-top" alt="Exhibition and Fair">
+        <div class="card shadow mb-5">
+          <img src="/images/exhibition-fair.png" class="card-img-top" alt="Exhibition and Fair">
           <div class="card-body text-center">
-            <h5 class="card-title">Exhibition and Fair</h5>
+            <h4 class="card-title">Exhibition and Fair</h4>
           </div>
         </div>
       </div>
       <div class="col-md-4 mt-4">
-        <div class="card shadow">
-          <img src="/images/health-fitness.jpg" class="card-img-top" alt="Health and Fitness">
+        <div class="card shadow mb-5">
+          <img src="/images/health-fitness.png" class="card-img-top" alt="Health and Fitness">
           <div class="card-body text-center">
-            <h5 class="card-title">Health and Fitness</h5>
+            <h4 class="card-title">Health and Fitness</h4>
           </div>
         </div>
       </div>
       <div class="col-md-4 mt-4">
-        <div class="card shadow">
-          <img src="/images/parenting-education.jpg" class="card-img-top" alt="Parenting and Education">
+        <div class="card shadow mb-5">
+          <img src="/images/parenting-education.png" class="card-img-top" alt="Parenting and Education">
           <div class="card-body text-center">
-            <h5 class="card-title">Parenting and Education</h5>
+            <h4 class="card-title">Parenting and Education</h4>
           </div>
         </div>
       </div>
       <div class="col-md-4 mt-4">
-        <div class="card shadow">
-          <img src="/images/charity-volunteer.jpg" class="card-img-top" alt="Charity and Volunteerism">
+        <div class="card shadow mb-5">
+          <img src="/images/charity-volunteer.png" class="card-img-top" alt="Charity and Volunteerism">
           <div class="card-body text-center">
-            <h5 class="card-title">Charity and Volunteerism</h5>
+            <h4 class="card-title">Charity and Volunteerism</h4>
           </div>
         </div>
       </div>
@@ -95,26 +95,26 @@
     <h2 class="text-center">Upcoming <span class="text-success">Events</span></h2>
     <div class="row mt-4">
         <div class="col-md-4">
-            <div class="card shadow">
-            <img src="/images/celebrations.jpg" class="card-img-top" alt="Celebrations and Festivities">
+            <div class="card shadow mb-5">
+            <img src="/images/chase.png" class="card-img-top" alt="Queenstown Chess Club Tournament">
             <div class="card-body text-center">
-                <h5 class="card-title">Celebrations and Festivities</h5>
+                <h4 class="card-title">Queenstown Chess Club Tournament</h4>
             </div>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card shadow">
-            <img src="/images/arts-culture.jpg" class="card-img-top" alt="Arts and Culture">
+            <div class="card shadow mb-5">
+            <img src="/images/football.png" class="card-img-top" alt="Soccer 5v5 Friendly Tournament open age">
             <div class="card-body text-center">
-                <h5 class="card-title">Arts and Culture</h5>
+                <h4 class="card-title">Soccer 5v5 Friendly Tournament<br>Open Age</h4>
             </div>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card shadow">
-            <img src="/images/exhibition-fair.jpg" class="card-img-top" alt="Exhibition and Fair">
+            <div class="card shadow mb-5">
+            <img src="/images/zumba.png" class="card-img-top" alt="Zumba Class">
             <div class="card-body text-center">
-                <h5 class="card-title">Exhibition and Fair</h5>
+                <h4 class="card-title">Zumba Class</h4>
             </div>
             </div>
         </div>
